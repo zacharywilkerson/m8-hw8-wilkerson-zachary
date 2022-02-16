@@ -133,16 +133,20 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: background-color .5s ease-out;
 }
 
 /* button transitions */
 section.hero > button:hover {
-  animation: enlarge .5s infinite alternate-reverse;
+  font-weight: bold;
+  color: var(--off-white);
+  border: solid 2px var(--off-white);
+  animation: enlarge .5s infinite alternate;
 }
 
 @keyframes enlarge {
   to {
-    transform: scale(1.1,1.1)
+    transform: scale(1.1,1.1);
   }
 }
 /* end button transitions */
