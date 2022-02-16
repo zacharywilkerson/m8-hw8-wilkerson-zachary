@@ -39,12 +39,45 @@ header {
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
+  position: relative;
+  text-decoration: none;
+  transition: color .4s linear;
 }
+
+header a::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--warn-color);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+header a:hover {
+  color: var(--warn-color);
+}
+
+header a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+} 
 /* end header link animations */
 
 /* article link transitions */
 main a {
   color: var(--danger-color);
+  box-shadow: inset 0 -3px 0 -1px var(--danger-color);
+  transition: background-color .5s ease-in-out, color .5s ease-in-out, box-shadow .5s ease-in-out;
+}
+
+main a:hover {
+  background-color: var(--danger-color);
+  color: var(--off-white);
+  box-shadow: inset 0 -40px 0 -1px var(--danger-color);
 }
 /* end article link transitions */
 
@@ -101,6 +134,18 @@ section.hero > button {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+/* button transitions */
+section.hero > button:hover {
+  animation: enlarge .5s infinite alternate-reverse;
+}
+
+@keyframes enlarge {
+  to {
+    transform: scale(1.1,1.1)
+  }
+}
+/* end button transitions */
 
 main article {
   padding: 48px 96px;
