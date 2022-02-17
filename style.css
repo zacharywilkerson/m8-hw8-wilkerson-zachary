@@ -35,7 +35,7 @@ header {
   border-bottom: var(--secondary-color) 6px solid;
 }
 
-/* header link animations! */
+/* header link transitions */
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
@@ -65,7 +65,7 @@ header a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 } 
-/* end header link animations */
+/* end header link transitions */
 
 /* article link transitions */
 main a {
@@ -136,7 +136,7 @@ section.hero > button {
   transition: background-color .5s ease-out;
 }
 
-/* button transitions */
+/* button animation */
 section.hero > button:hover {
   font-weight: bold;
   color: var(--off-white);
@@ -149,7 +149,7 @@ section.hero > button:hover {
     transform: scale(1.1,1.1);
   }
 }
-/* end button transitions */
+/* end button animation */
 
 main article {
   padding: 48px 96px;
